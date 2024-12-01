@@ -10,9 +10,6 @@
 6. Wylicza wartość dla danego argumentu
 7. Wyświetla postać kanoniczną
 8. Wyświetla postać iloczynową
-
-
-
 */
 using namespace std;
 int main()
@@ -26,7 +23,6 @@ int main()
     cin >> b;
     cout << "Podaj wartość c: ";
     cin >> c;
-    
     
     //1
     float delta = (b*b) - (4*a*c);
