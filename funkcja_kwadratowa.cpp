@@ -55,7 +55,7 @@ int main()
     }
     
     //3 
-    float q = (delta)/(4*a);
+    float q = (-delta)/(4*a);
     if(wgore == true){
         cout << "Zbiór wartości funkcji: [" << q << ";∞)" << endl;
     }
@@ -88,11 +88,44 @@ int main()
     else{
         cout << "Funkcja nie przecina osi OX" << endl;
     }
+    
+    //7
+    float p = (-b)/(2*a);
+    if(p<0 && q<0){
+        cout << "Postać kanoniczna funkcji: y=" << a <<"*(x+"<< abs(p) <<")^2"<< q <<endl;
+    }
+    else if(p>0 && q<0){
+    cout << "Postać kanoniczna funkcji: y=" << a <<"*(x-"<< p <<")^2"<< q <<endl;
+    }
+    else if(p<0 && q>0){
+        cout << "Postać kanoniczna funkcji: y=" << a <<"*(x+"<< abs(p) <<")^2 +"<< q <<endl;
+    }
+    else{
+        cout << "Postać kanoniczna funkcji: y=" << a <<"*(x-"<< p <<")^2 +"<< q <<endl;
+    }
+    //8
+    if(delta>0){
+        if(x1<0 && x2<0){
+        cout << "Postać iloczynowa funkcji: y=" << a <<"*(x+" << abs(x1) << ")*(x+" << abs(x2) <<")"<< endl;
+        }
+        else if(x1>0 && x2<0){
+            cout << "Postać iloczynowa funkcji: y=" << a <<"*(x-" << x1 << ")*(x+" << abs(x2) <<")"<< endl;
+        }
+        else if(x1<0 && x2>0){
+            cout << "Postać iloczynowa funkcji: y=" << a <<"*(x+" << abs(x1) << ")*(x-" << x2 <<")"<< endl;
+        }
+        else{
+            cout << "Postać iloczynowa funkcji: y=" << a <<"*(x-" << x1 << ")*(x-" << x2 <<")"<< endl;
+        }
+        
+    }
     //6
-     float arg;
+    float arg;
      cout << "Podaj argument: " << endl;
      cin >> arg;
      float war = a*(arg*arg) + b*arg + c;
     cout << war << endl;
+    
     return 0;
 }
+    
